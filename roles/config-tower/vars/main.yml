@@ -3,7 +3,8 @@
 org_name: Default 
 scm_branch: master 
 scm_url: "{{ github_repo }}"
-proj_name: "Homework Assignment"
+proj_name: "Homework Assignment by Daniel Zecena"
+proj_description "Homework Advanced Lab by Daniel Zecena"
 user_name: admin 
 password: r3dh4t1!
 ssh_cred_name: "Connect_to_workstation"
