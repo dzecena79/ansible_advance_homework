@@ -1,2 +1,38 @@
 ---
 # tasks file for db-tier
+
+- name: install postgres
+  yum:
+    name: postgresql-server
+    state: latest
+
+- name: enable apache at boot
+  service:
+    name: postgresql
+    enabled: yes
+
+- name: tell user to finish setting up postgres
+  debug:
+    msg: "Either uncomment the postgres setup or manually login and initialize"
+
+- name: check file postgresql conf
+  stat:
+    path: "/var/lib/pgsql/data/postgresql.conf"
+  register: pgsql_conf
+
+- name: initilize postgres
+  command: postgresql-setup initdb
+  when: not pgsql_conf.stat.exists
+
+#- name: copy file postgresql conf
+#  template:
+#    src: postgresql.conf.j2
+#    dest: /var/lib/pgsql/data/postgresql.conf
+#    force: no
+#  register: pgsql_conf
+
+- name: start postgres
+  service:
+    name: postgresql.service
+    state: started
+    enabled: yes

@@ -1,10 +1,5 @@
 ---
 
-# tasks file for osp.servers
-- name: Create new server instances and attaches them a network and passes metadata to the instance
-
-
-- name: Add floating IP to Servers
-   
-
-- name: Wait for server to be available
+#Tasks file for osp.servers
+- include_tasks: servers.yml
+  with_items: "{{ osp_servers }}"

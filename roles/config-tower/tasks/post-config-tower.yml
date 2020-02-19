@@ -1,19 +1,18 @@
 ---
-#- name: Create Homework Assignment project Daniel Zecena
-# Use tower module or tower-cli to create Ansible Tower project. Name of the project is specifed in ./vars/main.yml
+- name: Create Homework Assignment project Daniel Zecena
+  # Use tower module or tower-cli to create Ansible Tower project. Name of the project is specifed in ./vars/main.yml
 
   tower_project:
     name: "{{proj_name}}"
     description: "{{proj_description}}"
     organization: "{{org_name}}"
     state: present
-    tower_config_file: "/root/tower_cli.cfg"
     scm_type: git
     scm_url: https://github.com/dzecena79/ansible_advance_homework
     scm_update_on_launch: yes
     scm_branch: master
     #scm_credential: "/root/ansible_advance_homework/gitpass.yml"
-    scm_credential: git_key
+    #scm_credential: git_key
 
 
 
@@ -26,7 +25,7 @@
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
     tower_password: r3dh4t1!
-    ssh_key_data: "/root/.ssh/openstack.pem"
+    ssh_key_data: "{{path_to_opentlc_key}}"
     username: cloud-user
 
 - name: Create Inventory
@@ -56,7 +55,7 @@
     tower_username: admin
     tower_password: r3dh4t1!
     tower_verify_ssl: no
-    ssh_key_data: /root/.ssh/openstack.pem
+    ssh_key_data: "{{ lookup('file', '/root/.ssh/openstack.pem') }}"
     username: "{{ opentlc_login }}"
 
 - name: Remove secret
