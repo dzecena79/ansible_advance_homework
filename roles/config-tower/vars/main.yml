@@ -10,7 +10,7 @@ password: r3dh4t1!
 ssh_cred_name: "Connect_to_workstation"
 user_cred_name: "cloud-user"
 user_cred_path: "/root/.ssh/openstack.pem"
-path_to_opentlc_key: "/root/.ssh/ansiblepkhw.pem"
+path_to_opentlc_key: "/root/.ssh/mykey.pem"
 static_inventory_name: scm_inventory
 instance_group_name: osp
 workflow_template_name: cicd_workflow

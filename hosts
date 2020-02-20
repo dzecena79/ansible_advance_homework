@@ -1,2 +1,2 @@
 [workstation]
-workstation-9e52.rhpds.opentlc.com ansible_connection=ssh ansible_ssh_user=cloud-user  ansible_ssh_private_key_file=/root/.ssh/openstack.pem 
+workstation-9e52.rhpds.opentlc.com ansible_connection=ssh ansible_ssh_user=daniel.zecenaturcios-atos.net  ansible_ssh_private_key_file=/root/.ssh/mykey.pem
