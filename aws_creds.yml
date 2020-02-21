@@ -1,4 +1,4 @@
-- hosts: tag_AnsibleGroup_bastions
+- hosts: awsbastion
   gather_facts: true
   become: true
   tasks:
@@ -24,7 +24,7 @@
       organization: Default
       state: present
       kind: ssh
-      tower_host: tower1.{{tower_guid}}.example.opentlc.com
+      tower_host: tower1.{{tower_GUID}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
       tower_verify_ssl: no
@@ -35,7 +35,7 @@
       name: "3 tier app on Prod"
       #machine_credential: "Creds for AWS instances"
       credential: "Creds for AWS instances"
-      tower_host: tower1.{{tower_guid}}.example.opentlc.com
+      tower_host: tower1.{{tower_GUID}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
       tower_verify_ssl: no
@@ -48,13 +48,13 @@
       name: "Smoke test Prod env"
       #machine_credential: "Creds for AWS instances"
       credential: "Creds for AWS instances"
-      tower_host: tower1.{{tower_guid}}.example.opentlc.com
+      tower_host: tower1.{{tower_GUID}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
       tower_verify_ssl: no
       state: present
       job_type: run
       playbook: site-smoketest-aws.yml
-      project: "Homework Assignment"
+      project: "Homework Assignment Daniel Zecena AWS"
 
     

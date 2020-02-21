@@ -2,6 +2,10 @@
 - hosts: workstation
   become: true
   gather_facts: false
+  vars: 
+    - param_repo_base: "http://www.opentlc.com/download/ansible_bootcamp"
+      param_user: "daniel.zecenaturcios-atos.net"
+      param_password: "Sandia@2280@11"
   tasks:
     - name: create bin directory
       file:

@@ -1,0 +1,32 @@
+---
+# playbook to start the vm's on openstack
+- hosts: workstation
+  become: yes
+  tasks:
+   - name: Start instance frontend
+     os_server_action:
+        action: start
+        timeout: 200
+        cloud: ospcloud
+        server: frontend
+
+   - name: Start instance app1
+     os_server_action:
+        action: start
+        timeout: 200
+        cloud: ospcloud
+        server: app1
+
+   - name: Start instance app2
+     os_server_action:
+        action: start
+        timeout: 200
+        cloud: ospcloud
+        server: app2
+
+   - name: Start instance appsdb
+     os_server_action:
+        action: start
+        timeout: 200
+        cloud: ospcloud
+        server: db
