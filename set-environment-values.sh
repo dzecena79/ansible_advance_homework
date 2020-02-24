@@ -1,6 +1,6 @@
 #!/bin/bash
-OSP_GUID="9e52"
-TOWER_GUID="ff4f"
+OSP_GUID="dcc5"
+TOWER_GUID="7acb"
 OPENTLC_LOGIN="daniel.zecenaturcios-atos.net"
 GITHUB_REPO="https://github.com/dzecena79/ansible_advance_homework"
 JQ_REPO_BASE="http://www.opentlc.com/download/ansible_bootcamp"
