@@ -56,7 +56,8 @@
     tower_username: admin
     tower_password: r3dh4t1!
     tower_verify_ssl: no
-    ssh_key_data: "{{ lookup('file', '/root/.ssh/openstack.pem') }}"
+    become_method: "sudo"
+    ssh_key_data: "{{ lookup('file', '/root/.ssh/mykey.pem') }}"
     username: "{{ opentlc_login }}"
 
 - name: Remove secret
