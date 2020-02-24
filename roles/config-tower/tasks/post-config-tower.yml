@@ -26,8 +26,9 @@
     tower_username: admin
     tower_password: r3dh4t1!
     become_method: "sudo"
-    ssh_key_data: "{{path_to_opentlc_key}}"
-    username: "{{opentlc_login}}"
+    ssh_key_data: "/root/.ssh/openstack.pem"
+    username: cloud-user
+
 
 - name: Create Inventory
   command: |
@@ -58,7 +59,7 @@
     tower_verify_ssl: no
     become_method: "sudo"
     ssh_key_data: "{{ lookup('file', '/root/.ssh/mykey.pem') }}"
-    username: "cloud-user"
+    username: "{{ opentlc_login }}"
 
 - name: Remove secret
   file:

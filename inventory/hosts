@@ -1,5 +1,5 @@
 [workstation]
-workstation-9e52.rhpds.opentlc.com ansible_connection=ssh ansible_ssh_user=daniel.zecenaturcios-atos.net ansible_ssh_private_key_file=/root/.ssh/mykey.pem
+workstation-dcc5.rhpds.opentlc.com ansible_connection=ssh ansible_ssh_user=daniel.zecenaturcios-atos.net ansible_ssh_private_key_file=/root/.ssh/mykey.pem
 
 [awsbastion]
 bastion.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=daniel.zecenaturcios-atos.net ansible_ssh_private_key_file=/root/.ssh/mykey.pem
