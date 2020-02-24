@@ -61,8 +61,8 @@
       job_type: run
       playbook: site-smoketest-aws.yml
       project: "Homework Assignment Daniel Zecena AWS"
-   - name: Update Check the status of AWS instances
-     tower_job_template:
+  - name: Update Check the status of AWS instances
+    tower_job_template:
       name: "Check the status of AWS instances"
       credential: "Creds for AWS instances"
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
