@@ -58,7 +58,7 @@
     tower_verify_ssl: no
     become_method: "sudo"
     ssh_key_data: "{{ lookup('file', '/root/.ssh/mykey.pem') }}"
-    username: "{{ opentlc_login }}"
+    username: "cloud-user"
 
 - name: Remove secret
   file:
