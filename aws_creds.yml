@@ -23,7 +23,7 @@
       src: /root/.ssh/{{ file_to_copy.stdout }}
     register: keyfile 
 
- - name: Tower Creds key file
+  - name: Tower Creds key file
     tower_credential:
       name: Creds for AWS instances
       organization: Default
