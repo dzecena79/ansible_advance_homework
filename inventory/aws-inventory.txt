@@ -1,15 +1,15 @@
 [frontends]
-frontend1 ansible_host=frontend1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/aws.pem
+frontend1 ansible_host=frontend1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/4347key.pem
 
 [apps]
-app1 ansible_host=app1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/aws.pem
-app2 ansible_host=app2.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/aws.pem
+app1 ansible_host=app1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/4347key.pem
+app2 ansible_host=app2.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/4347key.pem
 
 [appdbs]
-appdb1 ansible_host=appdb1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/aws.pem
+appdb1 ansible_host=appdb1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/4347key.pem
 
 [support]
-support1 ansible_host=support1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/aws.pem
+support1 ansible_host=support1.4347.example.opentlc.com ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/root/.ssh/4347key.pem
 
 [threetierapp:children]
 frontends

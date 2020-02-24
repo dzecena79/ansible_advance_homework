@@ -2,11 +2,6 @@
 - hosts: localhost
   gather_facts: false 
   become: yes 
-#  vars_files:
-#    - site-config-tower-vars.yml
-#  tasks:
-#    - name: Include enviroment vars - Daniel Zecena
-#      include_vars: site-config-tower-vars.yml
   roles:
     - config-tower
 

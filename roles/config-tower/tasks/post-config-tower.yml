@@ -25,8 +25,9 @@
     tower_host: tower1.{{tower_GUID}}.example.opentlc.com
     tower_username: admin
     tower_password: r3dh4t1!
+    become_method: "sudo"
     ssh_key_data: "{{path_to_opentlc_key}}"
-    username: cloud-user
+    username: "{{opentlc_login}}"
 
 - name: Create Inventory
   command: |
