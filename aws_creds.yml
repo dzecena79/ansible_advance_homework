@@ -1,4 +1,4 @@
-- hosts: awsbastion
+- hosts: tag_AnsibleGroup_bastions
   gather_facts: true
   become: true
   tasks:
@@ -18,7 +18,12 @@
   - name: List key files
     shell: (cd /root/.ssh; find . -maxdepth 1 -type f -iname '*key.pem')| cut -d'/' -f2
     register: file_to_copy
-  - name: Tower Creds key file
+  - name: get Key
+    slurp:
+      src: /root/.ssh/{{ file_to_copy.stdout }}
+    register: keyfile 
+
+ - name: Tower Creds key file
     tower_credential:
       name: Creds for AWS instances
       organization: Default
