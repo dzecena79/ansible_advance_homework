@@ -2,7 +2,7 @@
   gather_facts: true
   tasks:
     - name: Curl website
-      uri: url=http://frontend/ status_code=200
+      uri: url=http://localhost/ status_code=200
       delegate_to: localhost
 
     - name: Fail if 'Ansible has done its job' is not in the page content
