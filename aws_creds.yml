@@ -53,7 +53,7 @@
       name: "Smoke test Prod env"
       #machine_credential: "Creds for AWS instances"
       credential: "Creds for AWS instances"
-      tower_host: tower1.{{tower_GUID}}.example.opentlc.com
+      tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
       tower_verify_ssl: no
